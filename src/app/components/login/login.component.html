@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="center-item">
+        <form [formGroup]="loginForm" (ngSubmit)="postSubmit()">
+            <div class="card shadow">
+                <div class="card-body">
+                    <i class="fa fa-shield"></i>
+                    <div class="text-center mb-5">
+                        <h1>Login</h1>
+                    </div>
+                    <div class="form-group">
+                        <small *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched">Please Enter Correct Email</small>
+                        <input class="form-control col-md-12 col-lg-12 col-xl-12 mb-4" type="email" name="email" placeholder="Email" formControlName="email" required [(ngModel)]="email">
+                        <small *ngIf="!loginForm.get('pwd').valid && loginForm.get('pwd').touched">Please Enter Correct Password</small>
+                        <input class="form-control col-md-12 col-lg-12 col-xl-12 mb-4" type="password" name="password" placeholder="Password" formControlName="pwd" required [(ngModel)]="pwd">
+                        <button class="btn btn-outline-primary w-100" type="submit" >Login</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <p>Do not know password?<a routerLink="/forgetPwd">Reset Password</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

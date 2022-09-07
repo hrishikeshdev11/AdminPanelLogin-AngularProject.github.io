@@ -1,0 +1,17 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.heading{
+    font-style: italic;
+    font-family: fantasy;
+    font-size: 150px;
+}
+.sub-heading{
+    font-style: italic;
+    font-family: fantasy;
+    font-size: 60px;
+}
+.btn{
+    padding: 15px 15px;
+}
